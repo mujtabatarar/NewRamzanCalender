@@ -26,11 +26,10 @@ const [calender, setCalender] = useState({});
         }
     }
 
-
   return (
       <Fragment>
         <div className='container'>
-
+          
           <h1 className="text-center mt-5"> Today Lahore Sehri/Iftar Details </h1>
             <table className="table">
                 <thead>
@@ -49,7 +48,7 @@ const [calender, setCalender] = useState({});
                 </tbody> 
             </table>
             
-       </div>
+       </div> */}
     </Fragment>
   );
 }
