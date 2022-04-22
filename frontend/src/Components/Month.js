@@ -3,6 +3,7 @@ import React, { Fragment, useEffect, useState } from "react";
 const Month= ()=>{
     const [holeCalender, setHoleCalender] = useState([]);
 
+    // fetch hole month timings from back.js 
     const callApi = async () =>{
         try{
             const response = await fetch('http://localhost:5100');
@@ -32,13 +33,13 @@ const Month= ()=>{
                     </tr>
                 </thead>
                 <tbody>
-                    {holeCalender.map(todo=>(
-                        <tr key={todo.sr_no}>
+                    {holeCalender.map(singleData=>(
+                        <tr key={singleData.sr_no}>
 
-                            <td>{todo.sr_no}</td>
-                            <td>{todo.sehritime}</td>
-                            <td>{todo.iftaritime}</td>
-                            <td>{todo.date}</td>
+                            <td>{singleData.sr_no}</td>
+                            <td>{singleData.sehritime}</td>
+                            <td>{singleData.iftaritime}</td>
+                            <td>{singleData.date}</td>
                         </tr>
                     ))}
                 </tbody> 

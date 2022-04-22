@@ -7,7 +7,7 @@ const pool = require('./dbConnect');
 app.use(express.json());
 app.use(cors());
 
-// this method return date string in 20 Apr 2022
+// this method return date string in (20 Apr 2022) form
 const returnDateString= ()=>{
     const d = new Date();
     const ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d)
@@ -18,6 +18,7 @@ const returnDateString= ()=>{
     return finalDate;
 };
 
+// get all entries in database
 app.get('/', async (req, res)=>{
     try{
         const response = await pool.query('SELECT * FROM todo');
@@ -27,6 +28,7 @@ app.get('/', async (req, res)=>{
     }
 });
 
+// get current day data
 app.get('/today', async (req, res )=>{
     try {
         const response = await pool.query('SELECT * FROM todo WHERE date=$1', [returnDateString()]);
