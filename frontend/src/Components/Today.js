@@ -1,10 +1,7 @@
 import React, {Fragment, useState, useEffect} from 'react';
 
-
-
-
-
 function Today() {
+  console.log(new Date());
 
 const [calender, setCalender] = useState({});
 
@@ -48,7 +45,7 @@ const [calender, setCalender] = useState({});
                 </tbody> 
             </table>
             
-       </div> */}
+       </div> 
     </Fragment>
   );
 }
