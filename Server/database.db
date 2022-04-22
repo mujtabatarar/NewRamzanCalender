@@ -1,0 +1,6 @@
+CREATE TABLE todo(
+    sr_no SERIAL PRIMARY KEY,
+    sehriTime VARCHAR(20),
+    iftariTime VARCHAR(20),
+    date VARCHAR(20)
+); 
